@@ -1,0 +1,32 @@
+services:
+    node:
+        image: node:lts
+        container_name: auriac_festival
+        hostname: app
+        restart: unless-stopped
+        tty: true
+        working_dir: /srv/app
+        volumes:
+            - ./:/srv/app
+            - nodes_modules:/srv/app/node_modules
+        ports:
+            - "1337:1337"
+        depends_on:
+            -   database
+
+    database:
+        container_name: auriac_database
+        restart: unless-stopped
+        image: postgres:17
+        env_file:
+            - .env
+        environment:
+            POSTGRES_USER: ${DATABASE_USERNAME}
+            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+            POSTGRES_DB: ${DATABASE_NAME}
+        volumes:
+            - strapi-data:/var/lib/postgresql/data/
+
+volumes:
+    nodes_modules:
+    strapi-data:

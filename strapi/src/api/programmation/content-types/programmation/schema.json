@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programmations",
+  "info": {
+    "singularName": "programmation",
+    "pluralName": "programmations",
+    "displayName": "Programmation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Compagnie": {
+      "type": "string",
+      "required": true
+    },
+    "photos": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
