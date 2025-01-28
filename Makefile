@@ -16,7 +16,7 @@ build-no-cache:
 up:
 	@$(eval env ?=)
 	@$(eval o ?=)
-	@$(DOCKER_COMP) $(DOCKER_COMPOSE_DEV) --env-file $(if $(env),$(env),'.env') up --detach $(o)
+	@$(DOCKER_COMP) $(DOCKER_COMPOSE_DEV) --env-file $(if $(env),$(env),'strapi/.env') up --detach $(o)
 
 start: build up
 
