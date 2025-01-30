@@ -1,8 +1,8 @@
 {
-  "name": "y",
+  "name": "festival-auriac-website",
   "version": "0.1.0",
   "private": true,
-  "description": "A Strapi application",
+  "description": "Backend Strapi app for the rebrand of the Auriac sur Vendinelle website",
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
