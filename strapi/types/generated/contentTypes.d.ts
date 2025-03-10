@@ -373,6 +373,7 @@ export interface ApiProgrammationProgrammation
   extends Struct.CollectionTypeSchema {
   collectionName: 'programmations';
   info: {
+    description: '';
     displayName: 'Programmation';
     pluralName: 'programmations';
     singularName: 'programmation';
@@ -381,6 +382,7 @@ export interface ApiProgrammationProgrammation
     draftAndPublish: true;
   };
   attributes: {
+    annee: Schema.Attribute.Integer & Schema.Attribute.Required;
     Compagnie: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

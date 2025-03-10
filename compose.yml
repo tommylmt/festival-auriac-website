@@ -8,9 +8,9 @@ services:
         working_dir: /srv/app
         volumes:
             - ./:/srv/app
-            - nodes_modules:/srv/app/node_modules
         ports:
             - "1337:1337"
+            - "3004:3000"
         depends_on:
             -   database
 
@@ -20,6 +20,8 @@ services:
         image: postgres:17
         env_file:
             - strapi/.env
+        ports:
+            - "5433:5432"
         volumes:
             - strapi-data:/var/lib/postgresql/data/
 
