@@ -1,7 +1,13 @@
 import Link from "next/link";
 
+interface MenuItem {
+    name: string,
+    path: string,
+    key: number
+}
+
 export default function Menu() {
-    const routes: object[] = [
+    const routes: MenuItem[] = [
         { name: 'Accueil', path: '/', key: 1 },
         { name: 'À propos', path: '/a-propos', key: 2 },
         { name: 'Adhérez', path: '/adherez', key: 3 }
