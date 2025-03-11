@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "compagnies",
+  "info": {
+    "singularName": "compagnie",
+    "pluralName": "compagnies",
+    "displayName": "Compagnie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "evenement": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::evenement.evenement",
+      "inversedBy": "compagnies"
+    },
+    "description": {
+      "type": "text"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}
