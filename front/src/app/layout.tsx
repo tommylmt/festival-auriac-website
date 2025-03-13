@@ -10,11 +10,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="fr">
-      <body>
+      <body className='bg-yellow-100'>
         <header>
             <Menu />
         </header>
-        {children}
+        <main id="main" className="p-5 flex justify-center">
+            <div className="basis-5xl">
+                {children}
+            </div>
+        </main>
       </body>
     </html>
   );
