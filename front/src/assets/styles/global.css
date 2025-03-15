@@ -1,1 +1,7 @@
+@import './fonts.css';
 @import "tailwindcss";
+
+@theme {
+    --font-groovy: 'Masa Groovy', serif;
+    --font-unique: 'Unique', sans-serif;
+}

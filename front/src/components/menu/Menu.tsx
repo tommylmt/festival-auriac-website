@@ -14,7 +14,7 @@ export default function Menu() {
     ];
 
     return (
-        <nav className='fixed bg-white/60 backdrop-blur-sm shadow-lg px-8 py-5 top-5 right-5 rounded-[50px]'>
+        <nav className='fixed bg-white/60 backdrop-blur-sm shadow-lg px-8 py-5 top-7 right-7 rounded-[50px]'>
             <ul className='flex gap-5'>
                 { routes.map(route => (
                     <li key={route.key} className='text-sm font-medium'>

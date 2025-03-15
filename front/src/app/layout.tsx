@@ -10,14 +10,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="fr">
-      <body className='bg-yellow-100'>
-        <header>
-            <Menu />
-        </header>
-        <main id="main" className="p-5 flex justify-center">
-            <div className="basis-5xl">
-                {children}
-            </div>
+      <body className='p-5'>
+        <main className='rounded-xl bg-amber-100'>
+            <header>
+                <Menu />
+            </header>
+            <section id="main" className="p-5 flex justify-center">
+                <div className="basis-5xl">
+                    {children}
+                </div>
+            </section>
         </main>
       </body>
     </html>

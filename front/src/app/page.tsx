@@ -12,7 +12,7 @@ export default function Home() {
     }
 
     const getNextEventDates = () => {
-        return 'Le 10 et 11 mai 2025' // Change me
+        return 'Le 10 et 11 mai 2025' // TODO Change me, compute if there is a festival soon, else display a catchphrase
     }
 
     useEffect(() => {
@@ -23,13 +23,16 @@ export default function Home() {
         <>
             <div className="text-center">
                 <img src="/statics/img/logo.png" alt="Logo Auriac sur Vendinelle" className="m-auto w-36" />
-                <h1>Festival des ruelles d'Auriac</h1>
-                <p>{getNextEventDates()}</p>
-                <p>Auriac-Sur-Vendinelle</p>
+                <h1 className='font-unique text-9xl text-slate-700'>Festival des ruelles d'Auriac</h1>
+                <p className='font-unique text-5xl text-amber-500'>
+                    {getNextEventDates()}
+                    <span className='h-3 w-3 align-middle bg-amber-600 rounded-full inline-block mx-5'></span>
+                    Auriac-Sur-Vendinelle
+                </p>
             </div>
 
-            <div className='mt-10'>
-                <h2>Programmation</h2>
+            <div className='mt-[100px]'>
+                <h2 className="font-unique mb-5 text-amber-500 text-7xl">Programmation</h2>
                 { events?.map(event =>
                     <div key={event.id}>
                         {event.titre}

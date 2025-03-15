@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Masa Groovy';
+    src: url('../fonts/masa-groovy/Masa-Groovy.woff2') format('woff2'),
+        url('../fonts/masa-groovy/Masa-Groovy.woff') format('woff')
+    ;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 650;
+}
+
+@font-face {
+    font-family: 'Unique';
+    src: url('../fonts/unique/Unique-Medium.woff') format('woff'),
+        url('../fonts/unique/Unique-Medium.woff2') format('woff2')
+    ;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 650;
+}
+
